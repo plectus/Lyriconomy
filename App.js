@@ -4,9 +4,8 @@ import {
   Text,
   View} from 'react-native';
 import HomeScreen from './components/HomeScreen';
-import TopBar from './components/TopBar'
-import Name from './components/Name';
-import BottomBar from './components/BottomBar';
+import TopBar from './components/shared-components/TopBar';
+import BottomBar from './components/shared-components/BottomBar';
 
 export default function App() {
   return (
