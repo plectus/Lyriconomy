@@ -3,8 +3,10 @@ import {
     View,
     Text,
     StyleSheet,
-    Dimensions
+    Dimensions,
+    Image
 } from 'react-native';
+import HelpButton from './shared-components/HelpButton';
 
 const TopBar = () => {
     return (
@@ -12,6 +14,8 @@ const TopBar = () => {
             <Text style= {style.topBar}>
                 Lyriconomy
             </Text>
+            <HelpButton />
+            
         </View>
     )
 }
