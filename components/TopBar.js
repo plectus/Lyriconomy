@@ -1,15 +1,24 @@
-import React from "react";
-import { View, Text, StyleSheet, Dimensions, Image } from "react-native";
-import HelpButton from "../shared-components/HelpButton";
+import React from 'react';
+import {
+    View,
+    Text,
+    StyleSheet,
+    Dimensions,
+    Image
+} from 'react-native';
+import HelpButton from './shared-components/HelpButton';
 
 const TopBar = () => {
-  return (
-    <View style={style.position}>
-      <Text style={style.topBar}>Lyriconomy</Text>
-      <HelpButton />
-    </View>
-  );
-};
+    return (
+        <View style = {style.position}>
+            <Text style= {style.topBar}>
+                Lyriconomy
+            </Text>
+            <HelpButton />
+            
+        </View>
+    )
+}
 
 const style = StyleSheet.create({
   topBar: {
