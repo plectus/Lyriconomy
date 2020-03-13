@@ -8,6 +8,8 @@ import {
   Dimensions
 } from "react-native";
 import MicButton from "../shared-components/MicButton";
+import TopBar from "./TopBar";
+import BottomBar from "./BottomBar";
 
 export default class HomeScreen extends React.Component {
   constructor() {
@@ -28,7 +30,7 @@ export default class HomeScreen extends React.Component {
         <Text style={style.title}>Search Lyrics</Text>
         <Text style={style.myText}>Tap To Search</Text>
         <MicButton />
-
+        <Text style={style.title}>OR</Text>
         <TextInput
           style={style.textInput}
           placeholder="Enter a song's title, artist or lyrics here!"
@@ -48,11 +50,14 @@ const style = StyleSheet.create({
   container: {
     padding: 20,
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center"
+    backgroundColor: "#f6e0ce",
+    justifyContent: "space-between",
+    alignItems: "center",
+    flexDirection: "column"
   },
   button: {
     marginBottom: 30,
+    fle: 1,
     width: Dimensions.get("window").width - 30,
     alignItems: "center",
     backgroundColor: "#36AF4E",
@@ -61,6 +66,7 @@ const style = StyleSheet.create({
 
   textInput: {
     padding: 40,
+    flex: 1,
     backgroundColor: "#FFFFFF",
     borderColor: "#707070",
     borderRadius: 50,
@@ -70,12 +76,14 @@ const style = StyleSheet.create({
 
   myText: {
     fontSize: 25,
+    flex: 1,
     color: "##746764",
     borderColor: "#0C0202",
     textAlign: "center"
   },
   title: {
     fontSize: 39,
+    flex: 1,
     color: "#707070",
     borderColor: "#707070"
   }
