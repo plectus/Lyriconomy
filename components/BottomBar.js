@@ -29,7 +29,7 @@ const style = StyleSheet.create({
   },
   borderStyle: {
     flex: 1,
-    height: 400,
+    height: 40,
     flexDirection: "row",
     justifyContent: "space-between",
     backgroundColor: "#2a2727",

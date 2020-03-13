@@ -20,6 +20,7 @@ const style = StyleSheet.create({
   position: {
     backgroundColor: "#2a2727",
     flexDirection: "row",
+    flex: 1,
     justifyContent: "space-between",
     width: Dimensions.get("window").width,
     top: 0,
