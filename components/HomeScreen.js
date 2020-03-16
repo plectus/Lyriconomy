@@ -7,7 +7,7 @@ import {
   TextInput,
   Dimensions
 } from "react-native";
-import MicButton from "../shared-components/MicButton";
+import MicButton from "./shared-components/MicButton";
 import TopBar from "./TopBar";
 import BottomBar from "./BottomBar";
 
@@ -16,31 +16,32 @@ export default class HomeScreen extends React.Component {
     super();
 
     this.state = {
-      content: "Zach"
+      content: ""
+      
     };
   }
 
   render() {
-    const contentChange = () => {
-      return this.setState({ content: "Poba" });
-    };
 
     return (
       <View style={style.container}>
         <Text style={style.title}>Search Lyrics</Text>
         <Text style={style.myText}>Tap To Search</Text>
         <MicButton />
-        <Text style={style.title}>OR</Text>
+        <Text style={style.title}>or</Text>
         <TextInput
           style={style.textInput}
-          placeholder="Enter a song's title, artist or lyrics here!"
+          placeholder="Enter a song's title"
+          onChangeText={text => this.setState({ text })}
+          value={this.state.text}
+        />
+        <TextInput
+          style={style.textInput}
+          placeholder="Enter an artist's name"
           onChangeText={text => this.setState({ text })}
           value={this.state.text}
         />
 
-        <TouchableOpacity onPress={contentChange}>
-          <Text style={style.container}>This is my button</Text>
-        </TouchableOpacity>
       </View>
     );
   }
@@ -57,7 +58,7 @@ const style = StyleSheet.create({
   },
   button: {
     marginBottom: 30,
-    fle: 1,
+    flex: 1,
     width: Dimensions.get("window").width - 30,
     alignItems: "center",
     backgroundColor: "#36AF4E",
@@ -65,12 +66,12 @@ const style = StyleSheet.create({
   },
 
   textInput: {
-    padding: 40,
+    padding: 20,
     flex: 1,
     backgroundColor: "#FFFFFF",
     borderColor: "#707070",
     borderRadius: 50,
-    height: 176,
+    height: 50,
     width: 358
   },
 

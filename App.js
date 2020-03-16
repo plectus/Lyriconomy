@@ -16,6 +16,7 @@ import { createMaterialBottomTabNavigator } from "@react-navigation/material-bot
 import { NavigationContainer } from "@react-navigation/native";
 import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 import Offline from "./components/OfflineLyrics";
+import TopBar from "./components/TopBar";
 
 export default function App() {
   //if (this.state.isLoading) return <LoadingScreen />;
