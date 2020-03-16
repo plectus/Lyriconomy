@@ -5,15 +5,17 @@ import {
     TouchableOpacity,
     StyleSheet,
     Dimensions,
+    Image,
 } from 'react-native';
 
-const MicButton = () => {
+const HelpButton = () => {
     return(
         <View>
         <TouchableOpacity style={style.button}>
-                <Text style={style.myText}>
-                    Click here to search vocally
-                </Text>
+        <Image
+          style={style.helpStyle}
+          
+            />
         </TouchableOpacity>
         </View>
     )
@@ -31,6 +33,10 @@ const style = StyleSheet.create({
         fontSize: 20,
         textAlign: 'center',
     },
+    helpStyle:{
+        width: 20, 
+        height: 20,
+    }
 });
 
-export default MicButton;
+export default HelpButton;
